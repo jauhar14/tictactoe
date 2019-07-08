@@ -54,6 +54,22 @@ public class coba {
 			System.out.println("Congratulations! " + winner + "'s have won! Thanks for playing.");
 		}
 	}
+	
+	static void populateEmptyBoard() {
+		for (int a = 0; a < 9; a++) {
+			board[a] = String.valueOf(a+1);
+		}
+	}
+	
+	static void printBoard() {
+		System.out.println("/---|---|---\\");
+		System.out.println("| " + board[0] + " | " + board[1] + " | " + board[2] + " |");
+		System.out.println("|-----------|");
+		System.out.println("| " + board[3] + " | " + board[4] + " | " + board[5] + " |");
+		System.out.println("|-----------|");
+		System.out.println("| " + board[6] + " | " + board[7] + " | " + board[8] + " |");
+		System.out.println("/---|---|---\\");
+	}
 
 	static String checkWinner() {
 		for (int a = 0; a < 8; a++) {
@@ -100,21 +116,5 @@ public class coba {
 
 		System.out.println(turn + "'s turn; enter a slot number to place " + turn + " in:");
 		return null;
-	}
-
-	static void printBoard() {
-		System.out.println("/---|---|---\\");
-		System.out.println("| " + board[0] + " | " + board[1] + " | " + board[2] + " |");
-		System.out.println("|-----------|");
-		System.out.println("| " + board[3] + " | " + board[4] + " | " + board[5] + " |");
-		System.out.println("|-----------|");
-		System.out.println("| " + board[6] + " | " + board[7] + " | " + board[8] + " |");
-		System.out.println("/---|---|---\\");
-	}
-
-	static void populateEmptyBoard() {
-		for (int a = 0; a < 9; a++) {
-			board[a] = String.valueOf(a+1);
-		}
-	}
+	}	
 }
